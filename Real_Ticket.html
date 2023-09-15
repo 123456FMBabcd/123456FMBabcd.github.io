@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>民主投票</title>
+</head>
+<body>
+    <div>
+        <p>民主投票</p>
+        <br>
+        <label for="studentId">学号：</label>
+        <input type="text" id="studentId">
+        <br>
+        <label for="agreement">是否同意：</label>
+        <input type="text" id="agreement">
+        <button onclick="vote()">提交</button>
+    </div>
+
+    <div id="result" style="display: none;">
+        <p>投票成功</p>
+    </div>
+
+    <script>
+        function vote() {
+            // 获取学号和是否同意的输入框的值
+            var studentIdValue = document.getElementById("studentId").value;
+            var agreementValue = document.getElementById("agreement").value;
+            
+            // 清空输入框
+            document.getElementById("studentId").value = "";
+            document.getElementById("agreement").value = "";
+            
+            // 显示投票成功消息
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+</html>
