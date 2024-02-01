@@ -12,6 +12,8 @@
         // 隐藏输入框和按钮
         document.getElementById("inputDiv").style.display = "none";
         document.getElementById("buttonsDiv").style.display = "none";
+        // 如果存在错误信息，则隐藏
+        document.getElementById("errorText").innerText = "";
         document.getElementById("content").innerHTML = `
           <b>Bob的AI小站</b><br>
           Bob's AI list<br><br><br>
