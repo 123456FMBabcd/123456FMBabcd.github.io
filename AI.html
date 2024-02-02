@@ -1,4 +1,4 @@
-暂时不支持任何形式注册，公用账号：{账号123密码abc}{账号456密码def}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,7 @@
     function validateLogin() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
+      document.getElementById("errorText").innerText = "暂时不支持任何形式注册，公用账号：{账号123密码abc}{账号456密码def}";
 
       // 检查账号和密码
       if ((username === "123" && password === "abc") || (username === "456" && password === "def")) {
@@ -15,8 +16,6 @@
         document.getElementById("buttonsDiv").style.display = "none";
         // 如果存在错误信息，则隐藏
         document.getElementById("errorText").innerText = "";
-        // 隐藏“暂不支持注册”提示
-        document.body.innerHTML = '';
         document.getElementById("content").innerHTML = `
           <b>Bob的AI小站</b><br>
           Bob's AI list<br><br><br>
