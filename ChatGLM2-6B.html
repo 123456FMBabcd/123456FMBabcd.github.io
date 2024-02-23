@@ -1,0 +1,45 @@
+<h1>Bob的AI助手</h1>
+
+<h2>准备工作</h2>
+1、Windows10或Windows11系统<br>
+2、6G以上的N卡，或者35G以上的内存，使用N卡质量更佳<br>
+3、Python 3.8+<br>
+4、CUDA Toolkit<br>
+5、git bash<br>
+6、python虚拟环境（非必须，强烈推荐）<br>
+
+<h2>本地部署ChatGLM2-6B</h2>
+
+<p>
+
+1、cd到目标文件夹，执行git clone https://github.com/THUDM/ChatGLM2-6B.git<br>
+
+2、进入克隆得到的文件夹<strong>ChatGLM2-6B</strong>，在此处打开cmd窗口，执行pip install -r requirements.txt<br>
+
+3、进入克隆得到的文件夹<strong>ChatGLM2-6B</strong>，在这个文件夹中新建一个名为<strong>models</strong>的文件夹<br>
+
+4、访问<a href="https://hf-mirror.com/THUDM/chatglm2-6b/tree/main" target=_blank title="https://hf-mirror.com/THUDM/chatglm2-6b/tree/main">模型下载链接</a>，将页面中所有文件下载到<strong>models</strong>文件夹中<br>
+
+5、编辑<strong>web_demo.py</strong>，将6、7两行中的THUDM/chatglm2-6b替换为models<br>
+
+6、执行<strong>python web_demo.py</strong>，开始使用<br>
+
+</p>
+
+<h2>常见问题：</h2>
+
+1、克隆时因网络问题中断：执行git clone https://github.moeyy.xyz/https://github.com/THUDM/ChatGLM2-6B.git。其中github.moeyy.xyz是一个镜像<br>
+
+2、运行web_demo.py时，出现有关huggingface的报错，说明2、3、4步有问题。检查模型是否正确下载，模型下载路径是否正确<br>
+
+3、运行web_demo.py时，报错AttributeError: 'Textbox' object has no attribute 'style'，说明gradio版本过新。执行<strong>pip uninstall gradio</strong> 和 <strong>pip install gradio==3.40.0</strong>两个命令<br>
+
+4、提示显存不足，将web_demo.py第七行替换为model = AutoModel.from_pretrained("models", trust_remote_code=True).float()，从GPU模式换为CPU模式。<br>
+
+5、提示AssertionError: Torch not compiled with CUDA enabled，执行<strong>pip uninstall torch</strong> 和 <strong>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117</strong>两个命令<br>
+
+<h2>参考资料</h2>
+<a href="https://github.com/THUDM/ChatGLM2-6B" target=_blank title="官方Github仓库及文档">官方Github仓库及文档</a><br>
+<a href="https://www.bilibili.com/video/BV1QF41197Bt/?vd_source=14a2077547dc1cb6e710afb87fe54fdb" target=_blank title="B站部署教程">B站部署教程</a><br>
+
+
