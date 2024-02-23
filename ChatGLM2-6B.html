@@ -1,3 +1,20 @@
+
+<!DOCTYPE html>
+<html lang=zh-Ch>
+
+
+
+<head>
+
+<link rel="icon" href="airplane-engines.ico" />
+<title>Bob的AI助手-本地部署ChatGLM2-6B</title>
+
+</head>
+  
+  
+  
+<body>
+
 <h1>Bob的AI助手</h1>
 
 <h2>准备工作</h2>
@@ -26,7 +43,7 @@
 
 </p>
 
-<h2>常见问题：</h2>
+<h2>常见问题：</h2><p>
 
 1、克隆时因网络问题中断：执行git clone https://github.moeyy.xyz/https://github.com/THUDM/ChatGLM2-6B.git。其中github.moeyy.xyz是一个镜像<br>
 
@@ -37,9 +54,17 @@
 4、提示显存不足，将web_demo.py第七行替换为model = AutoModel.from_pretrained("models", trust_remote_code=True).float()，从GPU模式换为CPU模式。<br>
 
 5、提示AssertionError: Torch not compiled with CUDA enabled，执行<strong>pip uninstall torch</strong> 和 <strong>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117</strong>两个命令<br>
+</p>
 
-<h2>参考资料</h2>
+<h2>参考资料</h2><p>
+
 <a href="https://github.com/THUDM/ChatGLM2-6B" target=_blank title="官方Github仓库及文档">官方Github仓库及文档</a><br>
 <a href="https://www.bilibili.com/video/BV1QF41197Bt/?vd_source=14a2077547dc1cb6e710afb87fe54fdb" target=_blank title="B站部署教程">B站部署教程</a><br>
+</p>
+<br>
+<strong>最后更新时间：2024.2.23 22:23</strong>
+</body>
 
+
+</html>
 
